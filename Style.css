@@ -1,0 +1,372 @@
+    /* common css */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    :root {
+        --prof: linear-gradient(230deg, #ffffffff, #659eff75, #ffffffff, #659eff75);
+        --prof2: linear-gradient(120deg, #5c95ffff, #ffff00b8);
+        --col1: #e77d19;
+        --col2: #ff98378a;
+        --col3: linear-gradient(90deg, red, yellow);
+        --col4: #ffffffce;
+        --col5: linear-gradient(270deg, red, yellow, green, orange, cyan, aqua);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    body {
+        background: var(--prof);
+    }
+
+    .navbar,
+    .gradi,
+    .picker,
+    .navbar {
+        box-shadow: 2px 2px 18px rgb(58, 56, 56);
+    }
+
+    .navbar {
+        background: var(--prof);
+        color: black;
+        padding: 1em;
+        border-radius: 1em;
+        margin: 0.5rem;
+        box-shadow: 1px 2px 5px rgba(102, 102, 102, 0.3);
+        height: 60px;
+        position: sticky;
+    }
+
+    .nav_ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .nav_ul a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    .nav_ul li {
+        list-style-type: none;
+    }
+
+    /* main.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+
+    .gradi {
+        background: var(--prof);
+        min-width: 95%;
+        padding: 2rem;
+        margin: 1rem 1.5rem;
+        border-radius: 2rem;
+        display: grid;
+        box-sizing: border-box;
+    }
+
+    .gradi h1 {
+        color: blue;
+        margin: auto;
+        text-shadow: 0 2px 15px #007ad2ff;
+    }
+
+    .grid_itms {
+        padding: 1rem;
+        margin: 0.5em;
+        min-height: 400px;
+        display: grid;
+        border: 3px solid #000;
+        border-radius: 1rem;
+        font-size: large;
+        font-weight: bold;
+        place-items: center;
+        color: aliceblue;
+        background: linear-gradient(145deg, #ffffff85, #ffffff57);
+        box-shadow: 0 2px 8px #85a2ffff;
+    }
+
+    .gradi_btn {
+        cursor: pointer;
+        padding: 10px 26px;
+        background: linear-gradient(140deg, #ff0000ff, #ff4e00ff, #ffdf00ff, #ffff00ff);
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: bolder;
+        font-size: large;
+    }
+
+    #applyGradient {
+        margin-top: 0.5rem;
+    }
+
+    #restoreButton:hover {
+        opacity: 0.9;
+    }
+
+    select,
+    option {
+        padding: 10px 26px;
+        margin: auto;
+    }
+
+    .txt_boxes {
+        /* background: #ff7d00cc; */
+        height: 130px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem;
+        padding: 1rem;
+        overflow: auto;
+    }
+
+    #hexValues input {
+        margin: 5px;
+        max-width: 6rem;
+    }
+
+    input #gradientvalues {
+        padding: 10px;
+    }
+
+    img.btn_cpy {
+        max-width: 20px;
+    }
+
+    label {
+        color: #000;
+        padding: 10px;
+    }
+
+    /* css for gradient */
+
+    .gradi {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #grid0 {
+        padding: 1rem;
+    }
+
+    #grid0 ul {
+        display: flex;
+        flex-flow: column wrap;
+        /* margin: auto; */
+        padding: 2vh;
+    }
+
+    #grid0 li {
+        list-style-type: square;
+        padding: 1vh;
+        margin: 1vh;
+    }
+
+    #grid0 a {
+        text-decoration: none;
+        color: black;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    #grid2 {
+        width: 30vw;
+    }
+
+    .linear-gradient {
+        margin: 1rem auto;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(0deg, #ffffff, #ffffff);
+        border: 3px solid #000;
+        outline: 3px solid white;
+        border-radius: 10px;
+    }
+
+    /* css for hex */
+
+    .picker {
+        background: var(--prof);
+        padding: 2rem;
+        margin: 1rem 1.5rem;
+        border-radius: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-sizing: border-box;
+        place-content: center;
+    }
+
+    #grid4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #in_grid1,
+    #in_grid2 {
+        display: grid;
+        place-items: center;
+    }
+
+    .colorBox1 {
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        min-width: 200px;
+        min-height: 200px;
+        max-width: 200px;
+        max-height: 200px;
+        margin: 3vh;
+        border: 2px solid black;
+        outline: 2px solid white;
+        border-radius: 0.5em;
+    }
+
+    .colorBox1 span {
+        cursor: pointer;
+    }
+
+    span{
+        color: black;
+    }
+
+    #colorbox2 {
+        min-width: 200px;
+        min-height: 200px;
+        max-width: 200px;
+        max-height: 200px;
+        margin: 5vh;
+        border: 2px solid black;
+        outline: 2px solid white;
+        border-radius: 0.5em;
+
+    }
+
+    #ref_btn {
+        cursor: pointer;
+        padding: 10px 26px;
+        margin-left: auto;
+        margin: 10px;
+        background: linear-gradient(140deg, #ff0000ff, #ff4e00ff, #ffdf00ff, #ffff00ff);
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: bolder;
+        font-size: large;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .txt_in {
+        padding: 5px;
+        margin: 2vh auto;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: small;
+    }
+
+    .txt_in:focus {
+        background: var(--prof);
+    }
+
+
+    .popup {
+        visibility: hidden;
+        position: absolute;
+        background-color: #ff0000ff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .picker {
+        padding: 1rem;
+        margin: 2rem;
+        flex-flow: column wrap;
+    }
+
+    /* css for rgba */
+
+    #grid5 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
+
+    /* #grid5 {
+    display: flex;
+    flex-flow: row wrap;
+} */
+
+    .grid5_itm {
+        padding: 1rem;
+        margin: auto;
+    }
+
+
+
+    .colorbox3 {
+        margin: 1rem;
+        min-width: 200px;
+        min-height: 200px;
+        max-width: 200px;
+        max-height: 200px;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+
+    .btn {
+        cursor: pointer;
+        padding: 10px 26px;
+        margin-left: auto;
+        margin: 10px;
+        background: linear-gradient(140deg, #ff0000ff, #ff4e00ff, #ffdf00ff, #ffff00ff);
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: bolder;
+        font-size: large;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #ffffff;
+        margin: auto;
+        color: #000;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 30vw;
+        /* Set the width to 30vw */
+    }
