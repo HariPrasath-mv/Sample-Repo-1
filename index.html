@@ -3,147 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>All In One Color Generator</title>
+    <title>Home Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+        }
+        .header{
+            width: 100%;
+            height: 60px;
+            background: #9fe6e6;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav_ul">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+    <div class="header">
+        <div class="nav">
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
             </ul>
-        </nav>
-    </header>
-    <main class="container">
-        <!-- FOR GRADIENT GENERATOR -->
-        <div class="gradi">
-            <div id="grid0">
-                <h1> All IN ONE COLOR GENERATOR </h1>
-                <ul>
-                    <li><a href="">Linear Gradient Generator</a></li>
-                    <li><a href="">Hex Color Picker</a></li>
-                    <li><a href="">RGBA Color Picker</a></li>
-                </ul>
-            </div>
-            <div class="grid_itms" id="grid1">
-                <div class="linear-gradient" id="gradient"></div>
-                <button class="gradi_btn" id="restoreButton">Restore</button>
-            </div>
-            <div class="grid_itms" id="grid2">
-                <select id="colorCount">
-                    <option value="2">2 values</option>
-                    <option value="3">3 values</option>
-                    <option value="4">4 values</option>
-                    <option value="5">5 values</option>
-                    <option value="6">6 values</option>
-                    <option value="7">7 values</option>
-                    <option value="8">8 values</option>
-                    <option value="9">9 values</option>
-                    <option value="10">10 values</option>
-                    <!-- Add more options as needed -->
-                </select>
-                <div class="txt_boxes">
-                    <div class="hex-values" id="hexValues">
-                        <!-- Textboxes will be added here -->
-                    </div>
-                </div>
-                <input type="range" min="0" max="360" value="0" id="angleSlider">
-                <label id="angleLabel">0deg</label>
-                <input type="text" class="txt_in" id="gradientInput" placeholder="Enter gradient value">
-                <button class="gradi_btn" id="applyGradient">Apply Gradient</button>
-            </div>
-
-            <div class="grid_itms" id="grid3">
-                <select id="direction">
-                    <option value="">None</option>
-                    <option value="to right">to right</option>
-                    <option value="to left">to left</option>
-                    <option value="to top">to top</option>
-                    <option value="to bottom">to bottom</option>
-                </select>
-                <button id="applyDirection">Apply Direction</button>
-                <input type="text" class="txt_in" id="gradientValue" readonly>
-                <button class="gradi_btn" id="copyButton"><img src="copy.png" alt="" class="btn_cpy"> copy</button>
-            </div>
         </div>
-
-        <!-- FOR HEX COLOR PICKER -->
-
-        <div class="picker">
-            <div id="grid4" class="grid_itms">
-                <div id="in_grid1">
-                    <span>Hex Color picker</span>
-                    <div class="colorBox1" id="colorBox"><span>click Here to copy</span></div><br>
-                    <div id="colorCode"></div>
-                    <div class="sliderContainer">
-                        <label>RED</label>
-                        <input type="range" min="0" max="255" value="255" class="slider" id="red">
-                    </div>
-                    <div class="sliderContainer">
-                        <label>GREEN</label>
-                        <input type="range" min="0" max="255" value="99" class="slider" id="green">
-                    </div>
-                    <div class="sliderContainer">
-                        <label>BLUE</label>
-                        <input type="range" min="0" max="255" value="71" class="slider" id="blue">
-                    </div>
-                    <div class="sliderContainer">
-                        <label>ALPHA</label>
-                        <input type="range" min="0" max="1" step="0.01" value="1" class="slider" id="alpha">
-                    </div>
-                    <div class="popup" id="popup">Copied!</div>
-                </div>
-                <!-- Hex color finder -->
-                <div class="finder" id="in_grid2">
-                    <span>Hex Color tester</span>
-                    <div id="colorbox2"></div><br>
-                    <input type="text" class="txt_in" id="hexInput" value="#" placeholder="Enter Hex Value"
-                        oninput="changeColor()"><br>
-                    <button onclick="refreshTextbox()" id="ref_btn">Refresh</button>
-                </div>
-            </div>
-
-            <!-- for rgba color picker -->
-
-            <div id="grid5" class="grid_itms">
-                <div id="in_grid3" class="grid5_itm">
-                    <span>RGBA Color Picker</span>
-                    <div id="colorbox" class="colorbox3" onclick="copyToClipboard()">
-                    </div>
-                </div>
-                <div id="in_grid4" class="grid5_itm">
-                    <label for="r">Red:</label><input type="range" min="0" max="255" id="r" oninput="updateColor()"><br>
-                    <label for="g">Green:</label>
-                    <input type="range" min="0" max="255" id="g" oninput="updateColor()"><br>
-                    <label for="b">Blue:</label>
-                    <input type="range" min="0" max="255" id="b" oninput="updateColor()"><br>
-                    <label for="a">Alpha:</label>
-                    <input type="range" min="0" max="1" step="0.01" id="a" oninput="updateColor()"><br>
-                    <label for="grey">Grey:</label>
-                    <input type="range" min="0" max="255" id="grey" oninput="updateGrey()">
-                </div>
-
-                <div id="in_grid5" class="grid5_itm">
-                    <input type="text" class="txt_in" id="colorInput"><br>
-                    <button class="btn" onclick="applyColor()">Apply RGBA</button>
-                </div>
-                <div class="grid5_itm" id="in_grid6">
-                    <button class="btn" onclick="restoreColor()">Restore</button>
-                    <button class="btn" onclick="generateColor()">Generate Color</button>
-                </div>
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <p id="modalText"></p>
-                    </div>
-                </div>
-            </div>
-    </main>
-    <script src="index.js"></script>
-
+    </div>
 </body>
-
 </html>
